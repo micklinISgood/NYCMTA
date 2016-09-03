@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="191" id="YeQ-0f-i69" customClass="CustomCell" customModule="MTA" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="191" id="YeQ-0f-i69" customClass="CustomCell" customModule="MTA" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="191"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YeQ-0f-i69" id="TgX-mc-7ef">
@@ -49,13 +49,12 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Ei8-Qo-WWW"/>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="RvC-Kn-lkc"/>
                             <outlet property="delegate" destination="BYZ-38-t0r" id="GXa-Lb-aiK"/>
                         </connections>
                     </tableView>
                     <connections>
                         <outlet property="myTableView" destination="wI4-zM-Fpi" id="moQ-IY-S8G"/>
-                        <outlet property="table" destination="wI4-zM-Fpi" id="frC-kn-HCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

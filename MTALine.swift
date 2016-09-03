@@ -14,9 +14,9 @@ class MTALine{
     var desc : String?
     init(name : String ,hexcolor: String, letter: String, desc : String){
         self.name = name
-        self.desc = desc
         self.hexcolor = hexcolor
         self.letter = letter
+        self.desc = desc
     }
     static func getJSON() -> [MTALine]
     {
@@ -30,6 +30,8 @@ class MTALine{
         if let jsonDict = MTALine.parseJSONFromData(jsonData){
             print(jsonDict)
         }
+        
+        
         
         return lines
     }

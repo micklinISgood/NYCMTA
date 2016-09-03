@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: UIViewController, UITableViewDataSource
 {
     
     @IBOutlet weak var myTableView: UITableView!
+    
+    var data = MTALine.getJSON()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,15 @@ class ViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return data.count
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: CustomCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CustomCell
+        
+        
+        return cell
+    }
 
 }
 
