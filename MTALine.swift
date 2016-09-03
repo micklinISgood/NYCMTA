@@ -28,9 +28,22 @@ class MTALine{
         let jsonData = NSData(contentsOfFile: jsonFile!)
         
         if let jsonDict = MTALine.parseJSONFromData(jsonData){
-            print(jsonDict)
+            //print(jsonDict)
+            if let allLine = jsonDict["lines"]{
+                //print(allLine[0])
+                //http://stackoverflow.com/questions/25563655/type-anyobject-does-not-conform-to-protocol-sequencetype
+                
+                for line in allLine as! [AnyObject]{
+                    //print(line["name"],line["hexcolor"])
+                    //http://www.tutorialspoint.com/swift/swift_initialization.htm
+                    //cast optional reading to String
+                    let input = MTALine(name: line["name"] as! String , hexcolor:line["hexcolor"]as! String,
+                                        letter:line["letter"]as! String, desc: line["desc"]as! String)
+                    lines.append(input);
+                }
+            }
+
         }
-        
         
         
         return lines
