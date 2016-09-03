@@ -15,6 +15,8 @@
 		E324B85A1D7A613B0047021F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E324B8581D7A613B0047021F /* LaunchScreen.storyboard */; };
 		E324B8651D7A613C0047021F /* MTATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324B8641D7A613C0047021F /* MTATests.swift */; };
 		E324B8701D7A613C0047021F /* MTAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324B86F1D7A613C0047021F /* MTAUITests.swift */; };
+		E324B8831D7A74840047021F /* subway-lister.json in Resources */ = {isa = PBXBuildFile; fileRef = E324B8821D7A74840047021F /* subway-lister.json */; };
+		E324B8851D7A74AE0047021F /* MTALine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324B8841D7A74AE0047021F /* MTALine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E324B86B1D7A613C0047021F /* MTAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E324B86F1D7A613C0047021F /* MTAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAUITests.swift; sourceTree = "<group>"; };
 		E324B8711D7A613C0047021F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E324B8821D7A74840047021F /* subway-lister.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "subway-lister.json"; sourceTree = "<group>"; };
+		E324B8841D7A74AE0047021F /* MTALine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTALine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		E324B8401D7A613B0047021F = {
 			isa = PBXGroup;
 			children = (
+				E324B8811D7A746E0047021F /* Model */,
 				E324B84B1D7A613B0047021F /* MTA */,
 				E324B8631D7A613C0047021F /* MTATests */,
 				E324B86E1D7A613C0047021F /* MTAUITests */,
@@ -126,6 +131,15 @@
 				E324B8711D7A613C0047021F /* Info.plist */,
 			);
 			path = MTAUITests;
+			sourceTree = "<group>";
+		};
+		E324B8811D7A746E0047021F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E324B8821D7A74840047021F /* subway-lister.json */,
+				E324B8841D7A74AE0047021F /* MTALine.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E324B85A1D7A613B0047021F /* LaunchScreen.storyboard in Resources */,
+				E324B8831D7A74840047021F /* subway-lister.json in Resources */,
 				E324B8571D7A613B0047021F /* Assets.xcassets in Resources */,
 				E324B8521D7A613B0047021F /* Main.storyboard in Resources */,
 			);
@@ -261,6 +276,7 @@
 			files = (
 				E324B84F1D7A613B0047021F /* ViewController.swift in Sources */,
 				E324B84D1D7A613B0047021F /* AppDelegate.swift in Sources */,
+				E324B8851D7A74AE0047021F /* MTALine.swift in Sources */,
 				E324B8551D7A613B0047021F /* MTA.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
