@@ -15,6 +15,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var letter: UILabel!
     @IBOutlet weak var circle: UIView!
     
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,37 +29,48 @@ class CustomCell: UITableViewCell {
     
     
     func setCell(line : MTALine){
+        //print("1",self.frame.size.height,line.letter)
+        
         self.desc.text = line.desc
+        self.desc.numberOfLines = 0
+        self.desc.preferredMaxLayoutWidth = self.desc.frame.width
         self.name.text = line.name
+        self.name.numberOfLines = 0
+        self.name.preferredMaxLayoutWidth = self.name.frame.width
+
+
         self.letter.text = line.letter
-        self.letter.sizeToFit()
         self.letter.textColor = UIColor.whiteColor()
         //http://stackoverflow.com/questions/24034300/swift-uilabel-text-alignment
-        self.letter.textAlignment = .Center
+        //self.letter.textAlignment = .Center
         //http://stackoverflow.com/questions/24356888/how-do-i-change-the-font-size-of-a-uilabel-in-swift
-        self.letter.font = UIFont.boldSystemFontOfSize(30)
+        let letterFont : CGFloat = 30.0
+        self.letter.font = UIFont.boldSystemFontOfSize(letterFont)
         self.name.font = UIFont.boldSystemFontOfSize(20)
         
-        /*
-        let x = letter.layer.position.x - (letter.frame.width )
-        let y = letter.layer.position.y  - (letter.frame.height)
-        let circlePath = UIBezierPath(roundedRect: CGRectMake(x , y , letter.frame.width , letter.frame.width), cornerRadius: 30)
+        let h = self.desc.frame.size.height + self.name.frame.size.height
+      
+        self.letter.textAlignment = .Center
+        self.letter.backgroundColor = hexColor2rgb(line.hexcolor!)
+   
+        self.letter.frame.size.height = letterFont*2
+        self.letter.frame.size.width = letterFont*2
+        //print("3",self.letter.frame.size.height,line.letter)
+        //print("4",self.letter.frame.size.width,line.letter)
+        self.letter.layer.cornerRadius = self.letter.frame.size.width/2
+        self.letter.clipsToBounds = true;
         
-        let circleShape = CAShapeLayer()
-        circleShape.path = circlePath.CGPath
-        circleShape.lineWidth = 0
-        let color = hexColor2rgb(line.hexcolor!).CGColor
-        circleShape.strokeColor = color
-        circleShape.fillColor = color
         
-        self.letter.layer.addSublayer(circleShape)
-*/
+        
+    
+        //self.letter.frame = CGRectMake(self.desc.frame.origin.x/2-letterFont/2 , self.frame.size.height/2-letterFont/2, letterFont, letterFont)
+        self.circle.frame = CGRectMake(self.desc.frame.origin.x/2-letterFont , h/2-letterFont, letterFont*0, letterFont*0)
         self.circle.backgroundColor = hexColor2rgb(line.hexcolor!)
-        //self.circle.frame = CGRectMake(0 , 0, self.letter.frame.width, self.letter.frame.width)
-
         //self.circle.frame.size.height = self.circle.frame.size.width
+        //https://www.appcoda.com/ios-programming-circular-image-calayer/
         self.circle.layer.cornerRadius = self.circle.frame.size.width/2
         self.circle.clipsToBounds = true
+        //print("2",self.desc.frame.size.height)
         //self.letter.layer.borderWidth = 10
 
 
