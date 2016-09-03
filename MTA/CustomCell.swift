@@ -24,5 +24,11 @@ class CustomCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    
+    func setCell(line : MTALine){
+        self.desc.text = line.desc
+        self.name.text = line.name
+        self.letter.text = line.letter
+    }
 }

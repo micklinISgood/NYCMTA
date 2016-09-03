@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource
     
     @IBOutlet weak var myTableView: UITableView!
     
-    var data = MTALine.getJSON()
+    var MTAsys = MTALine.getJSON()
     
     
     override func viewDidLoad() {
@@ -26,12 +26,12 @@ class ViewController: UIViewController, UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return MTAsys.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: CustomCell = tableView.dequeueReusableCellWithIdentifier("Cell") as! CustomCell
-        
-        
+        cell.setCell(MTAsys[indexPath.row])
+            
         return cell
     }
 
