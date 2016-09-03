@@ -17,6 +17,7 @@
 		E324B8701D7A613C0047021F /* MTAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324B86F1D7A613C0047021F /* MTAUITests.swift */; };
 		E324B8831D7A74840047021F /* subway-lister.json in Resources */ = {isa = PBXBuildFile; fileRef = E324B8821D7A74840047021F /* subway-lister.json */; };
 		E324B8851D7A74AE0047021F /* MTALine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E324B8841D7A74AE0047021F /* MTALine.swift */; };
+		E3B51FBD1D7B28DA00D2D0B2 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B51FBC1D7B28DA00D2D0B2 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E324B8711D7A613C0047021F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E324B8821D7A74840047021F /* subway-lister.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "subway-lister.json"; sourceTree = "<group>"; };
 		E324B8841D7A74AE0047021F /* MTALine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTALine.swift; sourceTree = "<group>"; };
+		E3B51FBC1D7B28DA00D2D0B2 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,6 @@
 		E324B8401D7A613B0047021F = {
 			isa = PBXGroup;
 			children = (
-				E324B8811D7A746E0047021F /* Model */,
 				E324B84B1D7A613B0047021F /* MTA */,
 				E324B8631D7A613C0047021F /* MTATests */,
 				E324B86E1D7A613C0047021F /* MTAUITests */,
@@ -104,9 +105,9 @@
 		E324B84B1D7A613B0047021F /* MTA */ = {
 			isa = PBXGroup;
 			children = (
-				E324B84C1D7A613B0047021F /* AppDelegate.swift */,
-				E324B84E1D7A613B0047021F /* ViewController.swift */,
-				E324B8501D7A613B0047021F /* Main.storyboard */,
+				E324B8871D7B1D4B0047021F /* Controller */,
+				E324B8811D7A746E0047021F /* Model */,
+				E324B8861D7B1D070047021F /* View */,
 				E324B8561D7A613B0047021F /* Assets.xcassets */,
 				E324B8581D7A613B0047021F /* LaunchScreen.storyboard */,
 				E324B85B1D7A613B0047021F /* Info.plist */,
@@ -140,6 +141,26 @@
 				E324B8841D7A74AE0047021F /* MTALine.swift */,
 			);
 			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E324B8861D7B1D070047021F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E324B8501D7A613B0047021F /* Main.storyboard */,
+			);
+			name = View;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E324B8871D7B1D4B0047021F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E324B84C1D7A613B0047021F /* AppDelegate.swift */,
+				E324B84E1D7A613B0047021F /* ViewController.swift */,
+				E3B51FBC1D7B28DA00D2D0B2 /* CustomCell.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +297,7 @@
 			files = (
 				E324B84F1D7A613B0047021F /* ViewController.swift in Sources */,
 				E324B84D1D7A613B0047021F /* AppDelegate.swift in Sources */,
+				E3B51FBD1D7B28DA00D2D0B2 /* CustomCell.swift in Sources */,
 				E324B8851D7A74AE0047021F /* MTALine.swift in Sources */,
 				E324B8551D7A613B0047021F /* MTA.xcdatamodeld in Sources */,
 			);
@@ -319,6 +341,7 @@
 				E324B8511D7A613B0047021F /* Base */,
 			);
 			name = Main.storyboard;
+			path = MTA;
 			sourceTree = "<group>";
 		};
 		E324B8581D7A613B0047021F /* LaunchScreen.storyboard */ = {
@@ -504,6 +527,7 @@
 				E324B8761D7A613C0047021F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E324B8771D7A613C0047021F /* Build configuration list for PBXNativeTarget "MTATests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +536,7 @@
 				E324B8791D7A613C0047021F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E324B87A1D7A613C0047021F /* Build configuration list for PBXNativeTarget "MTAUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +545,7 @@
 				E324B87C1D7A613C0047021F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
