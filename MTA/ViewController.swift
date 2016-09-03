@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource
 {
-    
     @IBOutlet weak var myTableView: UITableView!
     
     var MTAsys = MTALine.getJSON()
