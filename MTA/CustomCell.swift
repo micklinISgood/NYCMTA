@@ -47,24 +47,16 @@ class CustomCell: UITableViewCell {
         let letterFont : CGFloat = 30.0
         self.letter.font = UIFont.boldSystemFontOfSize(letterFont)
         self.name.font = UIFont.boldSystemFontOfSize(20)
-        
-        let h = self.desc.frame.size.height + self.name.frame.size.height
-      
+
+        //self.letter.frame.origin.x = 65
+        //self.letter.frame.origin.y = 80
         self.letter.textAlignment = .Center
-        self.letter.backgroundColor = hexColor2rgb(line.hexcolor!)
-   
-        self.letter.frame.size.height = letterFont*2
-        self.letter.frame.size.width = letterFont*2
-        //print("3",self.letter.frame.size.height,line.letter)
-        //print("4",self.letter.frame.size.width,line.letter)
-        self.letter.layer.cornerRadius = self.letter.frame.size.width/2
-        self.letter.clipsToBounds = true;
-        
-        
-        
-    
-        //self.letter.frame = CGRectMake(self.desc.frame.origin.x/2-letterFont/2 , self.frame.size.height/2-letterFont/2, letterFont, letterFont)
-        self.circle.frame = CGRectMake(self.desc.frame.origin.x/2-letterFont , h/2-letterFont, letterFont*0, letterFont*0)
+
+        //print("3", self.letter.frame.origin.x, line.letter)
+        //print("4", self.letter.frame.origin.y, line.letter)
+
+        self.circle.frame = CGRectMake(self.letter.frame.origin.x-letterFont/4,
+                                       self.letter.frame.origin.y-letterFont/2, letterFont*2, letterFont*2)
         self.circle.backgroundColor = hexColor2rgb(line.hexcolor!)
         //self.circle.frame.size.height = self.circle.frame.size.width
         //https://www.appcoda.com/ios-programming-circular-image-calayer/
