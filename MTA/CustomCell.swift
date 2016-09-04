@@ -29,41 +29,32 @@ class CustomCell: UITableViewCell {
     
     
     func setCell(line : MTALine){
-        //print("1",self.frame.size.height,line.letter)
         
         self.desc.text = line.desc
         self.desc.numberOfLines = 0
+        //dynamic tableCellView
         self.desc.preferredMaxLayoutWidth = self.desc.frame.width
+        
         self.name.text = line.name
         self.name.numberOfLines = 0
+        //dynamic tableCellView
         self.name.preferredMaxLayoutWidth = self.name.frame.width
-
-
-        self.letter.text = line.letter
-        self.letter.textColor = UIColor.whiteColor()
-        //http://stackoverflow.com/questions/24034300/swift-uilabel-text-alignment
-        //self.letter.textAlignment = .Center
-        //http://stackoverflow.com/questions/24356888/how-do-i-change-the-font-size-of-a-uilabel-in-swift
-        let letterFont : CGFloat = 30.0
-        self.letter.font = UIFont.boldSystemFontOfSize(letterFont)
         self.name.font = UIFont.boldSystemFontOfSize(20)
 
-        //self.letter.frame.origin.x = 65
-        //self.letter.frame.origin.y = 80
+        let letterFont : CGFloat = 30.0
+        
+        self.letter.text = line.letter
+        self.letter.textColor = UIColor.whiteColor()
+        self.letter.font = UIFont.boldSystemFontOfSize(letterFont)
         self.letter.textAlignment = .Center
 
-        //print("3", self.letter.frame.origin.x, line.letter)
-        //print("4", self.letter.frame.origin.y, line.letter)
 
         self.circle.frame = CGRectMake(self.letter.frame.origin.x-letterFont/4,
                                        self.letter.frame.origin.y-letterFont/2, letterFont*2, letterFont*2)
         self.circle.backgroundColor = hexColor2rgb(line.hexcolor!)
-        //self.circle.frame.size.height = self.circle.frame.size.width
-        //https://www.appcoda.com/ios-programming-circular-image-calayer/
         self.circle.layer.cornerRadius = self.circle.frame.size.width/2
         self.circle.clipsToBounds = true
-        //print("2",self.desc.frame.size.height)
-        //self.letter.layer.borderWidth = 10
+
 
 
 
@@ -84,6 +75,7 @@ class CustomCell: UITableViewCell {
         
         var rgbValue:UInt32 = 0
         NSScanner(string: cString).scanHexInt(&rgbValue)
+        
         
         let blueV = rgbValue & 0x0000FF
         rgbValue >>= 8

@@ -17,10 +17,9 @@ class ViewController: UIViewController, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //dynamic tableCellView
         myTableView.estimatedRowHeight = 85.0
-
         myTableView.rowHeight = UITableViewAutomaticDimension
-        //print("3",UITableViewAutomaticDimension)
 
         // Do any additional setup after loading the view, typically from a nib.
     }
