@@ -1,3 +1,8 @@
+
+How to build the project:
+https://www.youtube.com/watch?v=fk5AOCc_Ms8
+
+
 Resources:
  
 
